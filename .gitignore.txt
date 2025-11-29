@@ -4,6 +4,7 @@
 [Bb]uild/
 Library/PackageCache/
 Library/ArtifactDB/
+Assets/AssetStoreTools/
 *.csproj
 *.unityproj
 *.sln
