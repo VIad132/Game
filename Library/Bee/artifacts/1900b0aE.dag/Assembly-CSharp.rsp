@@ -459,6 +459,7 @@
 "Assets/PlayerInputAction/PlayerInputActions.cs"
 "Assets/Scripts/Bullets/Bullet.cs"
 "Assets/Scripts/GameInput.cs"
+"Assets/Scripts/Light/LightPulse.cs"
 "Assets/Scripts/Mimics/EnemyAI.cs"
 "Assets/Scripts/Player/Player.cs"
 "Assets/Scripts/Player/PlayerShooting.cs"

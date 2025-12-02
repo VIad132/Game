@@ -7,18 +7,18 @@ public class PlayerShooting : MonoBehaviour
     public float fireRate = 0.2f;
 
     public AudioClip shootSound; // оставляем только звук
+    public ParticleSystem muzzleFlash; // эффект выстрела
 
-    private AudioSource audioSource; // делаем приватным
+    private AudioSource audioSource; 
     private float nextFireTime = 0f;
 
     void Awake()
     {
-        // находим AudioSource на этом же объекте Player
+        // AudioSource как и раньше
         audioSource = GetComponent<AudioSource>();
 
         if (audioSource == null)
         {
-            // если его нет, добавляем автоматически
             audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.playOnAwake = false;
         }
@@ -51,6 +51,11 @@ public class PlayerShooting : MonoBehaviour
         {
             nextFireTime = Time.time + fireRate;
 
+            // Particle System 
+            if (muzzleFlash != null)
+                muzzleFlash.Play(); // запускаем эффект
+
+            //Логика пули 
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
             var cam = Camera.main;
@@ -71,11 +76,11 @@ public class PlayerShooting : MonoBehaviour
             if (b != null)
                 b.SetDirection(direction);
 
+            // Звук выстрела
             if (shootSound != null && audioSource != null)
             {
                 audioSource.PlayOneShot(shootSound);
             }
         }
     }
-
 }

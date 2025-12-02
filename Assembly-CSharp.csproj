@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerVsiual.cs" />
     <Compile Include="Assets\Scripts\Bullets\Bullet.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Light\LightPulse.cs" />
     <Compile Include="Assets\Scripts\Mimics\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
   </ItemGroup>
