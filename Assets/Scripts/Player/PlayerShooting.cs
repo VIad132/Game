@@ -72,6 +72,9 @@ public class PlayerShooting : MonoBehaviour
 
             Vector2 direction = (mousePos - firePoint.position).normalized;
 
+            // align bullet transform up with shooting direction (sprite should face up)
+            bullet.transform.up = new Vector3(direction.x, direction.y, 0f);
+
             var b = bullet.GetComponent<Bullet>();
             if (b != null)
                 b.SetDirection(direction);

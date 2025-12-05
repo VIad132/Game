@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        // move in world space along the stored direction
+        transform.Translate((Vector3)direction * speed * Time.deltaTime, Space.World);
     }
 }

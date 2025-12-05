@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 356e9211753b7bc47928c3254fab0924
+guid: fb47c3f3f963d064b8fd28b2651beef4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -97,23 +97,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerStatic_0
+      name: PlayerStatic_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 266
+        y: 264
         width: 263
-        height: 260
-      alignment: 9
-      pivot: {x: 0.3092974, y: 0.49432644}
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8948bcce2b3ea6f0800000000000000
-      internalID: -671534222242461300
+      spriteID: 6f72fd60d3594b5d0800000000000000
+      internalID: -3047646958482151434
       vertices: []
       indices: 
       edges: []
