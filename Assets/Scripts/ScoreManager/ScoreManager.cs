@@ -1,11 +1,14 @@
 using UnityEngine;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
-    public float score = 0f;
-    public float scorePerSecond = 1f; // скільки балів додається за секунду
+    [Header("Settings")]
+    public TextMeshProUGUI scoreText; // Сюди перетягніть об'єкт тексту в Unity
+    private int score = 0;
+    private float timer = 0f;
 
     private void Awake()
     {
@@ -15,18 +18,31 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-        AddScore(Time.deltaTime * scorePerSecond); // бали за час
+        // Додаємо 1 очко щосекунди
+        timer += Time.deltaTime;
+        if (timer >= 1f)
+        {
+            AddScore(1);
+            timer = 0f;
+        }
     }
 
-    // Метод нарахування балів
-    public void AddScore(float amount)
+    public void AddScore(int amount)
     {
         score += amount;
+        UpdateUI();
     }
 
-    // Метод для округленого значення (для UI)
     public int GetScore()
     {
-        return Mathf.FloorToInt(score);
+        return score;
+    }
+
+    private void UpdateUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
     }
 }

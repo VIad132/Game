@@ -42,7 +42,7 @@
     <UnityVersion>6000.0.62f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\kseiv\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.2.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\kseiv\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.2.1\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.62f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.62f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.62f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -51,13 +51,21 @@
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
     <Compile Include="Assets\PlayerInputAction\PlayerInputActions.cs" />
     <Compile Include="Assets\Scripts\ScoreManager\ScoreUI.cs" />
+    <Compile Include="Assets\Scripts\Mimics\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\ScoreManager\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\GameInput.cs" />
+    <Compile Include="Assets\Scripts\Mimics\WaveManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerVsiual.cs" />
+    <Compile Include="Assets\Scripts\Mimics\EnemyPool.cs" />
+    <Compile Include="Assets\Scripts\Mimics\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Bullets\Bullet.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Light\LightPulse.cs" />
     <Compile Include="Assets\Scripts\Mimics\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerRegister.cs" />
+    <Compile Include="Assets\Scripts\Mimics\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
   </ItemGroup>
   <ItemGroup>

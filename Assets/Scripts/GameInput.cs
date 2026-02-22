@@ -1,5 +1,5 @@
-using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
 {
@@ -9,22 +9,34 @@ public class GameInput : MonoBehaviour
 
     private void Awake()
     {
+        // Singleton safety
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
 
         playerInputActions = new PlayerInputActions();
-        playerInputActions.Enable();
+    }
+
+    private void OnEnable()
+    {
+        playerInputActions.Player.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerInputActions.Player.Disable();
     }
 
     public Vector2 GetMovementVector()
     {
-        Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
-
-        return inputVector;
+        return playerInputActions.Player.Move.ReadValue<Vector2>();
     }
 
     public Vector3 GetMousePosition()
     {
         return Mouse.current.position.ReadValue();
     }
-
 }
